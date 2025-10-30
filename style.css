@@ -1,109 +1,96 @@
-/* Базовые стили для body */
+/* Общие стили для body */
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
-    min-height: 100vh;
+    color: #333;
 }
 
-/* Основной контейнер */
+/* Контейнер для контента */
 .content {
     display: flex;
-    gap: 20px;
-    margin: 20px;
+    flex-wrap: wrap;
+    margin: 20px auto;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 20px;
 }
 
-/* Левая часть - информация */
+/* Левая часть с информацией */
 .content-left {
     flex: 1;
-    background: white;
+    min-width: 300px;
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Правая часть - фотография */
+/* Правая часть с фотографией */
 .content-right {
     flex: 0 0 300px;
-    background: white;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    margin-left: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: flex-start;
-}
-
-/* Стили для изображения */
-.profile-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 /* Стили для заголовков */
 h1 {
     color: #2c3e50;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #3498db;
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
     padding-bottom: 10px;
 }
 
 h2 {
     color: #34495e;
-    font-size: 1.8em;
+    font-size: 22px;
     margin-top: 25px;
     margin-bottom: 15px;
 }
 
 /* Стили для параграфов */
 p {
-    color: #555;
-    font-size: 1.1em;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
 /* Стили для списков */
 ul, ol {
-    color: #555;
-    font-size: 1.1em;
-    line-height: 1.6;
+    font-size: 16px;
     margin-left: 20px;
     margin-bottom: 20px;
 }
 
 li {
     margin-bottom: 8px;
+    line-height: 1.5;
 }
 
 ul li {
     list-style-type: square;
-    color: #e74c3c;
+    color: #2980b9;
 }
 
 ol li {
     list-style-type: decimal;
-    color: #27ae60;
+    color: #e74c3c;
 }
 
 /* Стили для ссылок */
 a {
     color: #3498db;
-    font-size: 1.1em;
     text-decoration: none;
-    transition: color 0.3s ease;
-    display: inline-block;
-    margin-bottom: 8px;
-    padding: 5px 0;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 a:hover {
@@ -111,24 +98,43 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Стили для текстовых элементов */
+b {
+    color: #2c3e50;
+}
+
+i {
+    color: #7f8c8d;
+}
+
+del {
+    color: #95a5a6;
+}
+
+/* Стили для изображения */
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .content {
         flex-direction: column;
-        margin: 10px;
     }
     
-    .content-left,
     .content-right {
-        margin: 0 0 20px 0;
-        flex: none;
+        flex: 1;
     }
     
     h1 {
-        font-size: 2em;
+        font-size: 24px;
     }
     
     h2 {
-        font-size: 1.5em;
+        font-size: 20px;
     }
 }
