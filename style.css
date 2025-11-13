@@ -1,0 +1,140 @@
+/* Общие стили для body */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Контейнер для контента */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+/* Левая часть с информацией */
+.content-left {
+    flex: 1;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Правая часть с фотографией */
+.content-right {
+    flex: 0 0 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Стили для заголовков */
+h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Стили для параграфов */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Стили для списков */
+ul, ol {
+    font-size: 16px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+ul li {
+    list-style-type: square;
+    color: #2980b9;
+}
+
+ol li {
+    list-style-type: decimal;
+    color: #e74c3c;
+}
+
+/* Стили для ссылок */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Стили для текстовых элементов */
+b {
+    color: #2c3e50;
+}
+
+i {
+    color: #7f8c8d;
+}
+
+del {
+    color: #95a5a6;
+}
+
+/* Стили для изображения */
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    
+    .content-right {
+        flex: 1;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}
